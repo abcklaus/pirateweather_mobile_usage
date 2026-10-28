@@ -7,7 +7,7 @@ from typing import Any
 from homeassistant.helpers.device_registry import DeviceEntryType, DeviceInfo
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
 
-from .const import ATTRIBUTION, DOMAIN
+from .const import API_KEY_URL, ATTRIBUTION, DOMAIN
 from .coordinator import PirateWeatherCoordinator
 
 # Pirate Weather icon -> Home Assistant condition
@@ -76,7 +76,7 @@ class PirateWeatherEntity(CoordinatorEntity[PirateWeatherCoordinator]):
             name=entry.title,
             manufacturer="Pirate Weather",
             entry_type=DeviceEntryType.SERVICE,
-            configuration_url="https://pirate-weather.apiable.io/",
+            configuration_url=API_KEY_URL,
         )
 
     @property

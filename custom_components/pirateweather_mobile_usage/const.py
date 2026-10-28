@@ -7,6 +7,8 @@ from typing import Final
 
 DOMAIN: Final = "pirateweather_mobile_usage"
 
+API_KEY_URL: Final = "https://pirate-weather.apiable.io/"
+
 CONF_TRACKER: Final = "tracker_entity_id"
 CONF_UPDATE_INTERVAL: Final = "update_interval"
 CONF_MIN_DISTANCE: Final = "min_distance"

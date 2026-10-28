@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "Pirate Weather Mobile",
-        "description": "Weather forecast that follows a device tracker. Get a free API key at https://pirate-weather.apiable.io/.",
+        "description": "Weather forecast that follows a device tracker. Get a free API key at {api_key_url}.",
         "data": {
           "name": "Name",
           "api_key": "API key",

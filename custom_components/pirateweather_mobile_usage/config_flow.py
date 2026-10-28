@@ -38,6 +38,7 @@ from .api import (
     PirateWeatherQuotaError,
 )
 from .const import (
+    API_KEY_URL,
     CONF_LANGUAGE,
     CONF_MAX_STALE,
     CONF_MIN_DISTANCE,
@@ -135,6 +136,7 @@ class PirateWeatherMobileConfigFlow(ConfigFlow, domain=DOMAIN):
             step_id="user",
             data_schema=self.add_suggested_values_to_schema(schema, user_input),
             errors=errors,
+            description_placeholders={"api_key_url": API_KEY_URL},
         )
 
     async def async_step_reauth(

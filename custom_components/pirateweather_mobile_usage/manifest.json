@@ -1,6 +1,7 @@
 {
   "domain": "pirateweather_mobile_usage",
   "name": "Pirate Weather Mobile",
+  "categories": ["weather_alerts.forecasts"],
   "codeowners": ["@abcklaus"],
   "config_flow": true,
   "dependencies": [],

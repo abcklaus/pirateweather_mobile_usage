@@ -1,0 +1,13 @@
+{
+  "domain": "pirateweather_mobile_usage",
+  "name": "Pirate Weather Mobile",
+  "codeowners": ["@abcklaus"],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/abcklaus/pirateweather_mobile_usage",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/abcklaus/pirateweather_mobile_usage/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}

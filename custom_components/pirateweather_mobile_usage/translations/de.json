@@ -1,0 +1,169 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Pirate Weather Mobile",
+        "description": "Wettervorhersage, die einem Device Tracker folgt. Einen kostenlosen API-Key gibt es unter https://pirate-weather.apiable.io/.",
+        "data": {
+          "name": "Name",
+          "api_key": "API-Key",
+          "tracker_entity_id": "Device Tracker"
+        },
+        "data_description": {
+          "api_key": "Dein Pirate-Weather-API-Key.",
+          "tracker_entity_id": "Device Tracker mit GPS-Koordinaten (Attribute latitude/longitude), z. B. vom Wohnmobil."
+        }
+      },
+      "reauth_confirm": {
+        "title": "Neuer API-Key",
+        "description": "Pirate Weather hat den API-Key abgelehnt. Bitte einen neuen eingeben.",
+        "data": {
+          "api_key": "API-Key"
+        }
+      },
+      "reconfigure": {
+        "data": {
+          "api_key": "API-Key",
+          "tracker_entity_id": "Device Tracker"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Der API-Key wurde abgelehnt.",
+      "cannot_connect": "Pirate Weather ist nicht erreichbar. Bitte Internetverbindung prüfen.",
+      "quota_exceeded": "Das Monatskontingent dieses API-Keys ist aufgebraucht.",
+      "tracker_not_found": "Diese Entität existiert nicht.",
+      "unknown": "Unerwarteter Fehler, siehe Log."
+    },
+    "abort": {
+      "already_configured": "Dieser Device Tracker ist bereits eingerichtet.",
+      "reauth_successful": "Der API-Key wurde aktualisiert.",
+      "reconfigure_successful": "Die Konfiguration wurde aktualisiert."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Optionen",
+        "data": {
+          "update_interval": "Aktualisierungsintervall",
+          "min_distance": "Neu abrufen nach Ortswechsel von",
+          "max_stale_hours": "Vorhersage offline behalten für",
+          "language": "Sprache der Textzusammenfassungen"
+        },
+        "data_description": {
+          "update_interval": "Reguläres Abfrageintervall in Minuten.",
+          "min_distance": "Neue Vorhersage abrufen, sobald sich der Tracker so weit (km) vom letzten Abfrageort entfernt hat.",
+          "max_stale_hours": "Ohne Verbindung bleibt die letzte Vorhersage so viele Stunden erhalten, danach werden die Entitäten nicht verfügbar.",
+          "language": "Sprache der Zusammenfassungstexte von Pirate Weather."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "temperature": {
+        "name": "Temperatur"
+      },
+      "apparent_temperature": {
+        "name": "Gefühlte Temperatur"
+      },
+      "dew_point": {
+        "name": "Taupunkt"
+      },
+      "humidity": {
+        "name": "Luftfeuchtigkeit"
+      },
+      "pressure": {
+        "name": "Luftdruck"
+      },
+      "wind_speed": {
+        "name": "Windgeschwindigkeit"
+      },
+      "wind_gust": {
+        "name": "Windböen"
+      },
+      "wind_bearing": {
+        "name": "Windrichtung"
+      },
+      "cloud_cover": {
+        "name": "Bewölkung"
+      },
+      "visibility": {
+        "name": "Sichtweite"
+      },
+      "uv_index": {
+        "name": "UV-Index"
+      },
+      "precip_intensity": {
+        "name": "Niederschlagsintensität"
+      },
+      "precip_probability": {
+        "name": "Regenwahrscheinlichkeit"
+      },
+      "precip_type": {
+        "name": "Niederschlagsart",
+        "state": {
+          "none": "Kein",
+          "rain": "Regen",
+          "snow": "Schnee",
+          "sleet": "Schneeregen",
+          "ice": "Eisregen",
+          "mixed": "Gemischt"
+        }
+      },
+      "nearest_storm_distance": {
+        "name": "Entfernung nächstes Unwetter"
+      },
+      "nearest_storm_bearing": {
+        "name": "Richtung nächstes Unwetter"
+      },
+      "summary": {
+        "name": "Zusammenfassung"
+      },
+      "precip_probability_next_hours": {
+        "name": "Regenwahrscheinlichkeit nächste 3 h"
+      },
+      "wind_gust_next_hours": {
+        "name": "Max. Windböen nächste 3 h"
+      },
+      "hourly_summary": {
+        "name": "Vorhersage-Zusammenfassung"
+      },
+      "today_temperature_max": {
+        "name": "Höchsttemperatur heute"
+      },
+      "today_temperature_min": {
+        "name": "Tiefsttemperatur heute"
+      },
+      "today_precip_probability": {
+        "name": "Regenwahrscheinlichkeit heute"
+      },
+      "today_precipitation": {
+        "name": "Niederschlag heute"
+      },
+      "today_summary": {
+        "name": "Zusammenfassung heute"
+      },
+      "alerts": {
+        "name": "Wetterwarnungen",
+        "state_attributes": {
+          "alerts": {
+            "name": "Wetterwarnungen"
+          }
+        }
+      },
+      "last_update": {
+        "name": "Letzte Aktualisierung"
+      },
+      "api_calls_remaining": {
+        "name": "Verbleibende API-Aufrufe",
+        "state_attributes": {
+          "monthly_limit": {
+            "name": "Monatslimit"
+          }
+        }
+      }
+    }
+  }
+}

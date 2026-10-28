@@ -1,0 +1,169 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Pirate Weather Mobile",
+        "description": "Weather forecast that follows a device tracker. Get a free API key at https://pirate-weather.apiable.io/.",
+        "data": {
+          "name": "Name",
+          "api_key": "API key",
+          "tracker_entity_id": "Device tracker"
+        },
+        "data_description": {
+          "api_key": "Your Pirate Weather API key.",
+          "tracker_entity_id": "Device tracker with GPS coordinates (latitude/longitude attributes), e.g. of the motorhome."
+        }
+      },
+      "reauth_confirm": {
+        "title": "New API key",
+        "description": "Pirate Weather rejected the API key. Enter a new one.",
+        "data": {
+          "api_key": "API key"
+        }
+      },
+      "reconfigure": {
+        "data": {
+          "api_key": "API key",
+          "tracker_entity_id": "Device tracker"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "The API key was rejected.",
+      "cannot_connect": "Pirate Weather could not be reached. Check the internet connection.",
+      "quota_exceeded": "The monthly quota of this API key is used up.",
+      "tracker_not_found": "This entity does not exist.",
+      "unknown": "Unexpected error, see the log."
+    },
+    "abort": {
+      "already_configured": "This device tracker is already set up.",
+      "reauth_successful": "The API key was updated.",
+      "reconfigure_successful": "The configuration was updated."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Options",
+        "data": {
+          "update_interval": "Update interval",
+          "min_distance": "Refresh after moving",
+          "max_stale_hours": "Keep forecast while offline for",
+          "language": "Language of text summaries"
+        },
+        "data_description": {
+          "update_interval": "Regular polling interval in minutes.",
+          "min_distance": "Fetch a new forecast once the tracker has moved this far (km) from the last forecast location.",
+          "max_stale_hours": "Without connection the last forecast is kept for this many hours; afterwards the entities become unavailable.",
+          "language": "Language of the summary texts returned by Pirate Weather."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "temperature": {
+        "name": "Temperature"
+      },
+      "apparent_temperature": {
+        "name": "Apparent temperature"
+      },
+      "dew_point": {
+        "name": "Dew point"
+      },
+      "humidity": {
+        "name": "Humidity"
+      },
+      "pressure": {
+        "name": "Pressure"
+      },
+      "wind_speed": {
+        "name": "Wind speed"
+      },
+      "wind_gust": {
+        "name": "Wind gust"
+      },
+      "wind_bearing": {
+        "name": "Wind bearing"
+      },
+      "cloud_cover": {
+        "name": "Cloud cover"
+      },
+      "visibility": {
+        "name": "Visibility"
+      },
+      "uv_index": {
+        "name": "UV index"
+      },
+      "precip_intensity": {
+        "name": "Precipitation intensity"
+      },
+      "precip_probability": {
+        "name": "Precipitation probability"
+      },
+      "precip_type": {
+        "name": "Precipitation type",
+        "state": {
+          "none": "None",
+          "rain": "Rain",
+          "snow": "Snow",
+          "sleet": "Sleet",
+          "ice": "Freezing rain",
+          "mixed": "Mixed"
+        }
+      },
+      "nearest_storm_distance": {
+        "name": "Nearest storm distance"
+      },
+      "nearest_storm_bearing": {
+        "name": "Nearest storm bearing"
+      },
+      "summary": {
+        "name": "Summary"
+      },
+      "precip_probability_next_hours": {
+        "name": "Precipitation probability next 3 h"
+      },
+      "wind_gust_next_hours": {
+        "name": "Max wind gust next 3 h"
+      },
+      "hourly_summary": {
+        "name": "Forecast summary"
+      },
+      "today_temperature_max": {
+        "name": "Today's high"
+      },
+      "today_temperature_min": {
+        "name": "Today's low"
+      },
+      "today_precip_probability": {
+        "name": "Today's precipitation probability"
+      },
+      "today_precipitation": {
+        "name": "Today's precipitation"
+      },
+      "today_summary": {
+        "name": "Today's summary"
+      },
+      "alerts": {
+        "name": "Weather alerts",
+        "state_attributes": {
+          "alerts": {
+            "name": "Weather alerts"
+          }
+        }
+      },
+      "last_update": {
+        "name": "Last update"
+      },
+      "api_calls_remaining": {
+        "name": "API calls remaining",
+        "state_attributes": {
+          "monthly_limit": {
+            "name": "Monthly limit"
+          }
+        }
+      }
+    }
+  }
+}
